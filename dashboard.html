@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APPLE DEVICES Energy tracking Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 30px auto;
+        }
+        img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Energy & CO₂ Dashboard</h1>
+
+    <div class="chart-container">
+        <h2>Total Electricity Consumption (kWh)</h2>
+        <img src="{{ url_for('energy_chart') }}" alt="Energy Chart">
+    </div>
+
+    <div class="chart-container">
+        <h2>Total CO₂ Emissions</h2>
+        <img src="{{ url_for('co2_chart') }}" alt="CO2 Chart">
+    </div>
+
+</body>
+</html>
